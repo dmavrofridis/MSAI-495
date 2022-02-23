@@ -8,7 +8,7 @@ setup(
     author="Dimitrios Mavrofridis, Aleksandr Simonayan, Donald Baracskay, Josh Cheema",
     author_email='dimitriosmavrofridis@gmail.com',
     packages=['MSAI_495_Project'],  # same as name
-    install_requires=["gdown", "pandas", "mat73", "matplotlib", "seaborn", "torch", "h5py"]
+    install_requires=["gdown", "pandas", "mat73", "matplotlib", "seaborn", "torch"]
     # external packages as dependencies
 
 )

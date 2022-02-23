@@ -1,6 +1,7 @@
 from main import *
 import argparse
 import matplotlib as plt
+import pandas as pd
 import seaborn as sns
 
 sns.set()
@@ -64,3 +65,11 @@ def most_occuring_actors(df):
     plt.show()
     print('-------->mean' + " " + str(name_count['count'].mean()))
     print('-------->median' + " " + str(name_count['count'].median()))
+
+
+if __name__ == '__main__':
+    df = group_age_decades()
+    df = generate_of_age_distribution(df)
+    df = generate_class_and_plot(df)
+    df = break_names(df)
+    df = most_occuring_actors(df)
