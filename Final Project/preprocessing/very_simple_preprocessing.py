@@ -11,12 +11,12 @@ from helper_functions import *
 import sys
 import os
 
+parser = ArgumentParser()
+parser.add_argument('--config', default='../config_files/config.yaml', help='Config .yaml file to use for training')
+
 if __name__ == '__main__':
 
     print("Image Cropping Starting..")
-
-    parser = ArgumentParser()
-    parser.add_argument('--config', default='../config_files/config.yaml', help='Config .yaml file to use for training')
 
     # To read the data directory from the argument given
     args = parser.parse_args()

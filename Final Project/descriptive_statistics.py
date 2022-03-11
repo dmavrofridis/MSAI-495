@@ -10,9 +10,6 @@ sns.set(rc={'figure.figsize': (29.7 / 2, 20.27 / 2)})
 sns.set(font_scale=1.9)
 
 
-
-
-
 def group_age_decades(path='files/imageName_age.csv'):
     df = pd.read_csv(path)
     lis_age = list(df['age'])

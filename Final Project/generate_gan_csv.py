@@ -1,17 +1,28 @@
 import os
 from random import random
+from global_variables import *
 
-image_dir = "/Users/aleksandrsimonyan/Desktop/cross_age_dataset_cleaned_and_resized"
+parser = ArgumentParser()
+parser.add_argument('--config', default='../config_files/config.yaml', help='Config .yaml file to use for training')
+
+# To read the data directory from the argument given
+args = parser.parse_args()
+with open(args.config) as file:
+    config = yaml.load(file, Loader=yaml.FullLoader)
+print(config)
+
+# To read the data directory from the argument given
+user_path = config['user_path']
 
 
 def age_to_group(age):
     if age <= 20:
         return 0
-    elif age > 20 and age <= 30:
+    elif 20 < age <= 30:
         return 1
-    elif age > 30 and age <= 40:
+    elif 30 < age <= 40:
         return 2
-    elif age > 40 and age <= 50:
+    elif 40 < age <= 50:
         return 3
     elif age > 50:
         return 4
@@ -25,7 +36,7 @@ train_age_group2 = []
 train_age_group3 = []
 train_age_group4 = []
 
-for filename in os.listdir(image_dir):
+for filename in os.listdir(user_path + clean_images_path):
     if '.DS_Store' in filename:
         continue
     age = int(filename.split('_')[0])

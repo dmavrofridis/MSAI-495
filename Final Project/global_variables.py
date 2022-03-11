@@ -1,3 +1,4 @@
 # Google Drive Links for Dataset Downloads
-
-PATH_TO_IMAGES = '/Users/aleksandrsimonyan/Desktop/cross_age_dataset_cleaned_and_resized/'
+clean_images_path = '/data/input/cross_age_dataset_cleaned_and_resized'
+blurry_images_path = '/data/input/cross_age_dataset_blurry'
+excluded_images_path = '/data/input/cross_age_dataset_excluded'
